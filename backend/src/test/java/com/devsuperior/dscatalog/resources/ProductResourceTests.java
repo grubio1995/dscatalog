@@ -126,8 +126,7 @@ public class ProductResourceTests {
 	public void deleteShouldDoNothingWhenIdExists() throws Exception {
 		
 		ResultActions result = 
-				mockMvc.perform(delete("/products/{id}",existingId)
-						.accept(MediaType.APPLICATION_JSON));
+				mockMvc.perform(delete("/products/{id}",existingId));
 	
 		result.andExpect(status().isNoContent());
 	}
@@ -136,8 +135,7 @@ public class ProductResourceTests {
 	public void deleteShouldReturnNotFoundWhenIdDoesntExist () throws Exception {
 		
 		ResultActions result = 
-				mockMvc.perform(delete("/products/{id}",nonExistingId)
-						.accept(MediaType.APPLICATION_JSON));
+				mockMvc.perform(delete("/products/{id}",nonExistingId));
 	
 		result.andExpect(status().isNotFound());
 	}
