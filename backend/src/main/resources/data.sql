@@ -56,7 +56,6 @@ INSERT INTO tb_product_category (product_id, category_id) VALUES (24, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (25, 3);
 
 
-
 INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Gabriel Pinhata de Campos Rubio', '455.403.178-07', 1800.00,TIMESTAMP WITH TIME ZONE '1995-07-19T20:50:07Z', 0);
 INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('José Aldo da Silva', '128.111.404-01', 10300.00,TIMESTAMP WITH TIME ZONE '1956-02-01T01:20:00Z', 2);
 INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Rafaela de Almeida', '889.123.421-08', 2500.57,TIMESTAMP WITH TIME ZONE '1998-12-20T22:59:30Z', 0);
@@ -67,3 +66,14 @@ INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Eduardo
 INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('João das Graças', '222.151.558-07', 1800.00,TIMESTAMP WITH TIME ZONE '1975-01-05T21:22:07Z', 2);
 INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Tereza de Jesus', '089.459.554.11', 500.00,TIMESTAMP WITH TIME ZONE '1950-02-03T06:50:07Z', 8);
 INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Simone Aparecida da Luz', '145.403.177-02', 2300.00,TIMESTAMP WITH TIME ZONE '1984-01-30T10:50:08Z', 2);
+
+
+INSERT INTO tb_user (first_name, last_name, email, password) VALUES ('Alex', 'Brown', 'alex@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (first_name, last_name, email, password) VALUES ('Maria', 'Green', 'maria@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+
+INSERT INTO tb_role (authority) VALUES ('ROLE_OPERATOR');
+INSERT INTO tb_role (authority) VALUES ('ROLE_ADMIN');
+
+INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
