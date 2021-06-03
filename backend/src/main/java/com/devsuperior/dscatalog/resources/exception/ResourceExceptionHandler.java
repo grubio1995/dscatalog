@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.devsuperior.dscatalog.services.exceptions.DataBaseException;
 import com.devsuperior.dscatalog.services.exceptions.ResourceNotFoundException;
-import com.devsuperior.dscatalog.services.exceptions.ValidationError;
 
 @ControllerAdvice
 public class ResourceExceptionHandler {

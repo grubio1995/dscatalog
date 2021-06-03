@@ -1,28 +1,28 @@
-package com.devsuperior.dscatalog.services.exceptions;
+package com.devsuperior.dscatalog.resources.exception;
 
 import java.io.Serializable;
 
 public class FieldMessage implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private String fieldMesage;
+	private String fieldName;
 	private String message;
-	
+
 	public FieldMessage() {
 	}
 
-	public FieldMessage(String fieldMesage, String message) {
+	public FieldMessage(String fieldName, String message) {
 		super();
-		this.fieldMesage = fieldMesage;
+		this.fieldName = fieldName;
 		this.message = message;
 	}
 
-	public String getFieldMesage() {
-		return fieldMesage;
+	public String getFieldName() {
+		return fieldName;
 	}
 
-	public void setFieldMesage(String fieldMesage) {
-		this.fieldMesage = fieldMesage;
+	public void setFieldName(String fieldName) {
+		this.fieldName = fieldName;
 	}
 
 	public String getMessage() {
@@ -32,6 +32,5 @@ public class FieldMessage implements Serializable {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	
-	
+
 }
