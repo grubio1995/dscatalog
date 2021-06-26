@@ -68,7 +68,7 @@ public class ProductResourceTests {
 		doThrow(ResourceNotFoundException.class).when(service).delete(nonExistingId);
 		doThrow(DataBaseException.class).when(service).delete(dependingId);
 
-		when(service.findAllPaged(any())).thenReturn(page);
+//		when(service.findAllPaged(any())).thenReturn(page);
 
 		when(service.findById(existingId)).thenReturn(productDTO);
 		when(service.findById(nonExistingId)).thenThrow(ResourceNotFoundException.class);		
